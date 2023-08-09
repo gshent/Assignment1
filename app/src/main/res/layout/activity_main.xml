@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/totalAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Amount"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/numPeopleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of People"
+        android:inputType="number"
+        android:layout_below="@id/totalAmountEditText"
+        android:layout_marginBottom="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/breakdownOptionsRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/numPeopleEditText"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/equalRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equal Breakdown"/>
+
+        <RadioButton
+            android:id="@+id/customRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom Breakdown"/>
+
+        <RadioButton
+            android:id="@+id/amountRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount Breakdown"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/customOptionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/breakdownOptionsRadioGroup"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/percentagesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Percentages (comma-separated)"
+            android:inputType="text"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/combinationOptionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/breakdownOptionsRadioGroup"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/personAmountEditTexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount (comma-separated)"
+            android:inputType="numberDecimal"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customOptionsLayout"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_button"
+        android:elevation="4dp"
+        android:text="Calculate"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton"
+        android:layout_marginTop="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="Results"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultTextView"
+        android:layout_marginTop="16dp"
+        android:text="Share Results"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

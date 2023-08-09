@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+    <string name="equal_breakdown">Equal Breakdown</string>
+    <string name="custom_breakdown">Custom Breakdown</string>
+    <string name="amount_breakdown">Amount Breakdown</string>
+    <string-array name="breakdown_types">
+        <item>Percentage</item>
+        <item>Ratio</item>
+    </string-array>
+
+
+</resources>
